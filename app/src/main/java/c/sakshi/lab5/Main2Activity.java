@@ -45,6 +45,13 @@ public class Main2Activity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        if(item.getItemId() == R.id.itemAddNote){
+            Intent intent = new Intent(this, Main3Activity.class);
+            SharedPreferences sharedPreferences = getSharedPreferences("c.sakshi.lab5", Context.MODE_PRIVATE);
+            sharedPreferences.edit().remove("username").apply();
+            startActivity(intent);
+            return true;
+        }
         return true;
     }
 }
